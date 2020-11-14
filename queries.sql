@@ -7,7 +7,7 @@ skill varchar
 ## Part 2: Test it with SQL
 SELECT name
 FROM employer
-WHERE location = "St. Louis";
+WHERE location = "Saint Louis, MO";
 
 ## Part 3: Test it with SQL
 DROP TABLE jobs;

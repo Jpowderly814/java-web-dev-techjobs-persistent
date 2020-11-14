@@ -1,12 +1,13 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
+import org.hibernate.validator.constraints.Length;
+
 import java.util.Objects;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 @MappedSuperclass
 public abstract class AbstractEntity {
@@ -16,8 +17,8 @@ public abstract class AbstractEntity {
     private int id;
 
     @NotBlank(message="Please enter a name.")
-    @Size(min=3, max=100)
-    private String name;
+    @Length(min=3, max=100)
+    public String name;
 
     public int getId() {
         return id;
